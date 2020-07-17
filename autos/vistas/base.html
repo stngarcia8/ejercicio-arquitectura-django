@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mantenedor de automóviles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <section>
+            <h1>Mantenedor de automóviles</h1><br>
+            <hr><br><br>
+            <a href="{% url 'agregarAuto' %}">Agregar nuevo automóvil</a>
+            {% block contenido %}
+            {% endblock %}
+    </section>
+</body>
+</html>

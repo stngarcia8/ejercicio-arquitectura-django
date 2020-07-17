@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Listado de automóviles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    {% block contenido %}
+    <h2>Ingrese datos de automóbiles</h2>
+    <form method="post">
+        <table>
+            {% csrf_token %}
+            {{ form.as_table }}
+        </table>
+        <br>
+        <button type="submit">Grabar información</button>
+    </form>
+    {% endblock %}
+    
+</body>
+</html>

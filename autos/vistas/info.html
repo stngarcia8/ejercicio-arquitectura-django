@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Listado de automóviles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    {% block contenido %}
+        <h2>Información del automovil.</h2>
+        <hr>
+        <br>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Valor</th>
+            </tr>
+            <tr>
+                <td>Marca del automóvil:</td><td>{{auto.marca }}</td>
+            </tr>
+            <tr>
+                <td>Modelo del automóvil:</td><td>{{auto.modelo }}</td>
+            </tr>
+            <tr>
+                <td>Cantidad de puertas:</td><td>{{ auto.puertas }}</td>
+            </tr>
+            <tr>
+                <td>Año del automóvil:</td><td>{{ auto.anio }}</td>
+            </tr>
+            <tr>
+                <td>Descripción:</td><td>{{ auto.descripcion }}</td>
+            </tr>
+        </table>
+        <br>
+        <a href="{% url 'inicio' %}">Volver</a>
+    {% endblock %}
+    
+</body>
+</html>
